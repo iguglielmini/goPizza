@@ -1,17 +1,12 @@
 import styled, { css } from "styled-components/native";
 import { LinearGradient } from "expo-linear-gradient";
+import { getBottomSpace } from "react-native-iphone-x-helper";
 
 export const ImageIntro = styled.Image`
   width: 260px;
   height: 360px;
   resize: stretch;
-`;
-
-export const Form = styled.View`
-  width: 100%;
-  padding-left: 32px;
-  padding-right: 32px;
-  justify-content: flex-start;
+  margin: auto;
 `;
 
 export const Title = styled.Text`
@@ -32,6 +27,15 @@ export const Container = styled(LinearGradient).attrs(({ theme }) => ({
   end: { x: 0.5, y: 0.5 },
 }))`
   flex: 1;
-  align-items: center;
   justify-content: center;
+`;
+
+export const Content = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: false,
+  contentContainerStyle: {
+    paddingBottom: getBottomSpace() + 48
+  }
+})`
+  width: 100%;
+  padding: 0 32px;
 `;
