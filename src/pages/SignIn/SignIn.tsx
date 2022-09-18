@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Input from '../../components/Input';
+import Button from '../../components/Button';
 import IntroImg from '../../assets/intro-img.png';
 
 import * as S from './styles';
@@ -24,6 +25,7 @@ function SignIn(){
             placeholder='Senha'
             secureTextEntry
           />
+          <Button title='Entrar' type='secondary' />
         </S.Form>
     </S.Container>
   );
