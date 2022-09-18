@@ -20,6 +20,7 @@ export const Title = styled.Text`
     font-size: 32px;
     font-weight: 400;
     text-align: left;
+    margin-bottom: 16px;
 `;
 export const Label = styled.Text`
     color: white;

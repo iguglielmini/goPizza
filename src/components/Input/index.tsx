@@ -1,10 +1,14 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, TextInputProps } from 'react-native';
 
-// import { Container } from './styles';
+import { Container, TypeProps } from './styles';
 
-const Input: React.FC = () => {
-  return <View />;
+type Props = TextInputProps & {
+  type?: TypeProps;
+}
+
+export function Input({ type = 'primary', ...rest}: Props) {
+  return <Container type={type} {...rest} />;
 }
 
 export default Input;
